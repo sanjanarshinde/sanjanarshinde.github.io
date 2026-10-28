@@ -31,7 +31,7 @@ header.top .wrap{display:flex;justify-content:space-between;align-items:center;g
 nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:500}
 nav a:hover{color:var(--accent)}
 /* hero */
-.hero{padding:72px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero{padding:72px 0 64px;display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
 .hero h1{font:800 clamp(2.6rem,6vw,4.4rem)/1.02 var(--head);letter-spacing:-.02em;margin:0 0 20px}
 .hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 28px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
@@ -94,7 +94,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
   <div class="wrap">
     <a class="brand" href="#top">Sanjana R. Shinde</a>
     <nav aria-label="Main">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -111,18 +111,6 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
         <a class="btn" href="https://github.com/sanjanarshinde">View GitHub</a>
       </div>
     </div>
-    <div class="query" aria-label="Profile summary written as a SQL query">
-      <div><span class="k">SELECT</span> tool, used_for</div>
-      <div><span class="k">FROM</span> sanjana_skills</div>
-      <div><span class="k">WHERE</span> status = <span class="c">'portfolio ready'</span>;</div>
-      <table>
-        <tr><th>tool</th><th>used_for</th></tr>
-        <tr class="rowfade"><td>Excel</td><td>cleaning, dashboards</td></tr>
-        <tr class="rowfade"><td>SQL</td><td>sales analysis</td></tr>
-        <tr class="rowfade"><td>Power BI</td><td>reports, DAX</td></tr>
-        <tr class="rowfade"><td>Python</td><td>pandas, charts</td></tr>
-      </table>
-    </div>
   </div>
 
   <section id="about">
@@ -137,17 +125,6 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
         <li><span>Focus</span><span>Data analytics</span></li>
         <li><span>Tools</span><span>Excel, SQL, Power BI, Python</span></li>
       </ul>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div><h3>Excel</h3><p>Data cleaning, formulas, pivot tables, dashboards</p></div>
-      <div><h3>SQL</h3><p>PostgreSQL, joins, aggregations, window functions</p></div>
-      <div><h3>Power BI</h3><p>Data modeling, DAX measures, interactive reports</p></div>
-      <div><h3>Python</h3><p>Pandas, NumPy, Matplotlib, Jupyter notebooks</p></div>
-      <div><h3>Other</h3><p>GitHub, generative AI tools</p></div>
     </div>
   </section>
 
@@ -195,22 +172,31 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
     </article>
   </section>
 
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Excel</h3><p>Data cleaning, formulas, pivot tables, dashboards</p></div>
+      <div><h3>SQL</h3><p>PostgreSQL, joins, aggregations, window functions</p></div>
+      <div><h3>Power BI</h3><p>Data modeling, DAX measures, interactive reports</p></div>
+      <div><h3>Python</h3><p>Pandas, NumPy, Matplotlib, Jupyter notebooks</p></div>
+      <div><h3>Other</h3><p>GitHub, generative AI tools</p></div>
+    </div>
+  </section>
+
   <section id="experience">
-    <h2>Experience and education</h2>
+    <h2>Experience</h2>
     <div class="job">
       <h3>Junior Executive, Grievance Department</h3>
-      <p class="meta">Shriram Finance · 1 year 4 months</p>
+      <p class="meta">Shriram Finance</p>
       <ul>
-        <li>Handled customer complaints from first contact through resolution.</li>
-        <li>Escalated unresolved cases to the right teams and followed up until they closed.</li>
-        <li>Kept accurate records of every case, which is the habit I now bring to data work.</li>
+        <li>Handled 100 to 200 customer complaints a day, with about 80% resolved on the same day.</li>
+        <li>Analyzed the daily MIS file from head office in Excel and prepared a daily report for the zonal teams.</li>
+        <li>Worked with zonal members, regional teams and branch team leaders to find the cause of each issue and agree on the resolution steps.</li>
+        <li>Escalated major cases to my manager and, for the hardest ones, to head office, collecting the documents they needed from the zonal office.</li>
+        <li>Handled RBI complaints in coordination with my manager.</li>
+        <li>Maintained complete records of every complaint, the remarks received and the documents for major cases.</li>
       </ul>
-    </div>
-    <div class="edu">
-      <h3>Data Analytics and Business Analytics program</h3>
-      <p>SkilloVilla · May 2026 to present</p>
-      <h3 style="margin-top:20px">Bachelor of Science</h3>
-      <p>Kristu Jayanti University · 2019 to 2022</p>
+      <p class="meta" style="margin-top:14px">Tools used: Excel, Microsoft Outlook, Microsoft Word</p>
     </div>
   </section>
 
