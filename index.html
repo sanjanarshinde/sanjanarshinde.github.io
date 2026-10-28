@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanjana R. Shinde | Data Analyst Portfolio</title>
+<meta name="description" content="Data analytics portfolio of Sanjana R. Shinde: Excel, SQL, Power BI and Python projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f2f5f1; --surface:#ffffff; --ink:#13233a; --muted:#52627a;
+  --line:#cfd8d2; --accent:#0f6b5c; --accent-soft:#d9eee8; --mark:#f0b429;
+  --head:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0f1a2a; --surface:#16263b; --ink:#e9eef5; --muted:#a3b2c6; --line:#27405c; --accent:#5fd0b8; --accent-soft:#12372f; --mark:#f0b429;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--mark);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.brand{font:700 1.1rem var(--head);text-decoration:none;color:var(--ink)}
+nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--accent)}
+/* hero */
+.hero{padding:72px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font:800 clamp(2.6rem,6vw,4.4rem)/1.02 var(--head);letter-spacing:-.02em;margin:0 0 20px}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink);transition:background .15s,color .15s}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.query{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--mark);border-radius:10px;padding:20px 22px;font:500 .95rem/1.7 ui-monospace,Consolas,Menlo,monospace;box-shadow:6px 6px 0 var(--accent-soft)}
+.query .k{color:var(--accent);font-weight:700}
+.query .c{color:var(--muted)}
+.query table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.88rem}
+.query th{text-align:left;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line);padding:4px 0}
+.query td{padding:4px 0}
+.rowfade{animation:rise .7s ease both}
+.rowfade:nth-child(2){animation-delay:.25s}.rowfade:nth-child(3){animation-delay:.5s}.rowfade:nth-child(4){animation-delay:.75s}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,3.5vw,2.2rem)/1.15 var(--head);margin:0 0 28px;letter-spacing:-.01em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px;max-width:34em}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{text-align:right;font-weight:500}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px 32px}
+.skills h3{font:700 1.05rem var(--head);margin:0 0 8px;padding-bottom:8px;border-bottom:3px solid var(--mark);display:inline-block}
+.skills p{margin:0;color:var(--muted)}
+/* projects */
+.proj{display:grid;grid-template-columns:150px 1fr auto;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.proj:first-of-type{border-top:1px solid var(--line)}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.85rem;padding:3px 12px;border-radius:99px}
+.proj h3{font:700 1.3rem var(--head);margin:0 0 6px}
+.proj p{margin:0 0 6px;color:var(--muted);max-width:40em}
+.proj .tools{font-size:.92rem;font-weight:500}
+.proj a.go{font-weight:600;white-space:nowrap}
+/* experience */
+.job{max-width:44em}
+.job h3{font:700 1.25rem var(--head);margin:0}
+.job .meta{color:var(--muted);margin:2px 0 14px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:6px}
+.edu{margin-top:36px;max-width:44em}
+.edu h3{font:700 1.15rem var(--head);margin:0}
+.edu p{margin:2px 0;color:var(--muted)}
+/* contact */
+.contact p{max-width:34em;margin:0 0 20px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.92rem}
+@media (max-width:820px){
+  .hero,.about{grid-template-columns:1fr}
+  .hero{padding-top:48px}
+  .proj{grid-template-columns:1fr;gap:8px}
+  nav a{margin:0 16px 0 0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Sanjana R. Shinde</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <h1>I turn raw data into answers people can act on.</h1>
+      <p class="lead">I'm Sanjana, a data analyst. I work with Excel, SQL, Power BI and Python, and I build projects that go from messy data to a clear dashboard.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="https://github.com/sanjanarshinde">View GitHub</a>
+      </div>
+    </div>
+    <div class="query" aria-label="Profile summary written as a SQL query">
+      <div><span class="k">SELECT</span> tool, used_for</div>
+      <div><span class="k">FROM</span> sanjana_skills</div>
+      <div><span class="k">WHERE</span> status = <span class="c">'portfolio ready'</span>;</div>
+      <table>
+        <tr><th>tool</th><th>used_for</th></tr>
+        <tr class="rowfade"><td>Excel</td><td>cleaning, dashboards</td></tr>
+        <tr class="rowfade"><td>SQL</td><td>sales analysis</td></tr>
+        <tr class="rowfade"><td>Power BI</td><td>reports, DAX</td></tr>
+        <tr class="rowfade"><td>Python</td><td>pandas, charts</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div>
+        <p>I'm Sanjana R. Shinde, a data analyst who uses Excel, SQL, Power BI and Python to turn raw data into clear, actionable insights.</p>
+        <p>My projects include an interactive Power BI report on retail store sales, a SQL analysis of Amazon sales data in PostgreSQL, a Python analysis of project and employee data with pandas, and a set of Excel workbooks across finance, sales and operations.</p>
+        <p>My work covers the full path from data cleaning and analysis to dashboards and written findings.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Focus</span><span>Data analytics</span></li>
+        <li><span>Tools</span><span>Excel, SQL, Power BI, Python</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Excel</h3><p>Data cleaning, formulas, pivot tables, dashboards</p></div>
+      <div><h3>SQL</h3><p>PostgreSQL, joins, aggregations, window functions</p></div>
+      <div><h3>Power BI</h3><p>Data modeling, DAX measures, interactive reports</p></div>
+      <div><h3>Python</h3><p>Pandas, NumPy, Matplotlib, Jupyter notebooks</p></div>
+      <div><h3>Other</h3><p>GitHub, generative AI tools</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="proj">
+      <div><span class="tag">Power BI</span></div>
+      <div>
+        <h3>ShopNest Store Capstone</h3>
+        <p>An interactive Power BI report on a retail store's sales, with a written project report covering the findings.</p>
+        <span class="tools">Power BI, DAX, data modeling</span>
+      </div>
+      <a class="go" href="https://github.com/sanjanarshinde/powerbi-data-analytics-project">View on GitHub</a>
+    </article>
+
+    <article class="proj">
+      <div><span class="tag">SQL and Power BI</span></div>
+      <div>
+        <h3>Amazon Sales Analysis</h3>
+        <p>SQL queries in PostgreSQL to answer sales questions, plus a Power BI dashboard built on the cleaned dataset.</p>
+        <span class="tools">PostgreSQL, pgAdmin, Power BI</span>
+      </div>
+      <a class="go" href="https://github.com/sanjanarshinde/SQL-data-analytics-projects">View on GitHub</a>
+    </article>
+
+    <article class="proj">
+      <div><span class="tag">Python</span></div>
+      <div>
+        <h3>Python Fundamentals Capstone</h3>
+        <p>A ten-task analysis of project, employee and seniority data using pandas dataframes, with charts for each result.</p>
+        <span class="tools">Python, pandas, Matplotlib, Jupyter</span>
+      </div>
+      <a class="go" href="https://github.com/sanjanarshinde/python-data-analytics-projects">View on GitHub</a>
+    </article>
+
+    <article class="proj">
+      <div><span class="tag">Excel</span></div>
+      <div>
+        <h3>Excel Portfolio</h3>
+        <p>Five workbooks at different skill levels across finance, sales and marketing, and operations and HR.</p>
+        <span class="tools">Excel, pivot tables, formulas, dashboards</span>
+      </div>
+      <a class="go" href="https://github.com/sanjanarshinde/excel-data-analysis-projects">View on GitHub</a>
+    </article>
+  </section>
+
+  <section id="experience">
+    <h2>Experience and education</h2>
+    <div class="job">
+      <h3>Junior Executive, Grievance Department</h3>
+      <p class="meta">Shriram Finance · 1 year 4 months</p>
+      <ul>
+        <li>Handled customer complaints from first contact through resolution.</li>
+        <li>Escalated unresolved cases to the right teams and followed up until they closed.</li>
+        <li>Kept accurate records of every case, which is the habit I now bring to data work.</li>
+      </ul>
+    </div>
+    <div class="edu">
+      <h3>Data Analytics and Business Analytics program</h3>
+      <p>SkilloVilla · May 2026 to present</p>
+      <h3 style="margin-top:20px">Bachelor of Science</h3>
+      <p>Kristu Jayanti University · 2019 to 2022</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let's talk</h2>
+    <p>I'm open to data analyst roles. The best way to see my work is on GitHub, and you can message me on LinkedIn.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/sanjanarshinde">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/">LinkedIn</a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sanjana R. Shinde</div>
+</footer>
+
+</body>
+</html>
